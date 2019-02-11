@@ -1,6 +1,3 @@
 #!/bin/bash
-while :
-do
-	echo "Hello, world!!"
-	sleep 3
-done
+timestamp=$( date +"%Y-%m-%d_%H-%M-%S" )
+touch $timestamp
