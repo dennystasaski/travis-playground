@@ -1,4 +1,5 @@
 language: bash
 install: true
-
-
+before_install:
+- openssl aes-256-cbc -K $encrypted_f180050e85b8_key -iv $encrypted_f180050e85b8_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
