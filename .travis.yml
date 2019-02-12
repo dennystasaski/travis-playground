@@ -11,6 +11,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r -e 'ssh -p 9250' --delete-after --quiet $TRAVIS_BUILD_DIR/app shelby@45.27.203.103:/home/shelby/app/tmp
+  script: $TRAVIS_BUILD_DIR/deploy.sh 
   on:
     branch: master
