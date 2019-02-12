@@ -14,6 +14,3 @@ deploy:
   script: rsync -r -e 'ssh -p 9250' --delete-after --quiet $TRAVIS_BUILD_DIR/app shelby@45.27.203.103:/home/shelby/app/tmp
   on:
     branch: master
-before_install:
-- openssl aes-256-cbc -K $encrypted_f180050e85b8_key -iv $encrypted_f180050e85b8_iv
-  -in deploy_rsa.enc -out deploy_rsa -d
